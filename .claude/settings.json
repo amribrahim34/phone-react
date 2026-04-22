@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sqlite3 /home/amr-ibrahim/Desktop/task/phone-laravel/database/sample.db \"SELECT substr\\(phone,1,5\\) as code, COUNT\\(*\\) FROM customer GROUP BY code;\")",
+      "Bash(sqlite3 /home/amr-ibrahim/Desktop/task/phone-laravel/database/sample.db \"SELECT * FROM customer WHERE phone LIKE '\\(237\\)%' LIMIT 5; SELECT * FROM customer WHERE phone LIKE '\\(251\\)%' LIMIT 3; SELECT * FROM customer WHERE phone LIKE '\\(256\\)%' LIMIT 3;\")",
+      "Bash(sqlite3 /home/amr-ibrahim/Desktop/task/phone-laravel/database/sample.db \"SELECT * FROM customer ORDER BY id;\")",
+      "Bash(curl -s \"http://127.0.0.1:8000/api/customers?country=Morocco&state=valid&page=2\")",
+      "Bash(python3 -m json.tool)",
+      "Bash(curl -s \"http://127.0.0.1:8000/api/customers?country=Morocco&state=valid\")"
+    ]
+  }
+}
